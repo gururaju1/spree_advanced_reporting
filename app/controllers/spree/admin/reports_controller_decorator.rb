@@ -3,7 +3,7 @@ Spree::Admin::ReportsController.class_eval do
   before_filter :basic_report_setup, :actions => [:profit, :revenue, :units, :top_products, :top_customers, :geo_revenue, :geo_units, :count]
 
   def add_own
-  #  return if Spree::Admin::ReportsController::AVAILABLE_REPORTS.has_key?(:geo_profit)
+    return if Spree::Admin::ReportsController::AVAILABLE_REPORTS.has_key?(:geo_profit)
     Spree::Admin::ReportsController::AVAILABLE_REPORTS.merge!(ADVANCED_REPORTS)
   end
   I18n.locale = Rails.application.config.i18n.default_locale
