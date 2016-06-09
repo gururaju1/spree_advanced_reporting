@@ -1,0 +1,15 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  adv_report:
+    revenue: "Revenue"
+    units: "Units"
+    profit: "Profit"
+    count: "Order Count"
+    top_products: "Top Products"
+    top_customers: "Top Customers"
+    submit: "Submit"
+    geo_revenue: "Geo Revenue"
+    geo_units: "Geo Units"
+    geo_profit: "Geo Profit"
