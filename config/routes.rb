@@ -1,6 +1,11 @@
-Spree::Core::Engine.routes.prepend do
-  # Add your extension routes here
-  
+ Spree::Core::Engine.routes.prepend do
+  #namespace :admin do
+  #  resources :reports, :only => [:index, :show] do
+  #    collection do
+  #      get :sales_total
+  #    end
+  #  end
+  #end
   match '/admin/reports/revenue' => 'admin/reports#revenue',  :via  => [:get, :post],
                                                               :as   => 'revenue_admin_reports'
 
@@ -29,5 +34,9 @@ Spree::Core::Engine.routes.prepend do
   match '/admin/reports/geo_profit' => 'admin/reports#geo_profit', :via => [:get, :post],
                                                                     :as => 'geo_profit_admin_reports'
 
+  namespace :admin do
+    resource :report_settings
+  end
 
+  # match "/admin" => "admin/advanced_report_overview#index", :as => :admin
 end
